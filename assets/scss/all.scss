@@ -1,10 +1,21 @@
 // BS 5 Required
 @import "bootstrap/scss/functions";
-
+@import "./helper/variables";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/variables-dark";
 @import "bootstrap/scss/maps";
+
+@mixin logo($background-image) {
+  background-image: url($background-image);
+  background-repeat: no-repeat;
+  display: block;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 @import "bootstrap/scss/mixins";
+
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/root";
 @import "bootstrap/scss/reboot";
@@ -24,4 +35,32 @@
 @import "bootstrap/scss/helpers";
 
 // Utilities
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-position": (
+      property: background-position,
+      class: bg-p,
+      values: center,
+    ),
+    "background-repeat": (
+      property: background-repeat,
+      class: bg-rp,
+      values: no-repeat,
+    ),
+    "background-size": (
+      property: background-size,
+      class: bg-s,
+      values: cover,
+    ),
+  )
+);
+
 @import "bootstrap/scss/utilities/api";
+
+// custom class
+.logo {
+  @include logo(
+    "https://raw.githubusercontent.com/hexschool/2022-web-layout-training/053bcf3afe88348b79971d2ea8de28f179cba5c5/week5/logo-ANSWER.svg"
+  );
+}
