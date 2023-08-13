@@ -105,3 +105,9 @@ git push -u origin main // 僅限第一次輸入，往後只需要輸入 git pus
    - `const newFileName = fileName.slice('pages/'.length);`: 從原檔案名切割掉 "pages/"，得到新的檔案名稱。
 
    - `bundle[fileName].fileName = newFileName;`: 將新的檔名賦值給輸出檔案的 `fileName` 屬性，這將改變該檔案的輸出路徑。
+
+## 相關資源
+
+1. 設計搞 https://xd.adobe.com/view/456141fc-d0a0-44d4-93ad-6ab54a4b5351-1032/
+
+2. 圖庫 https://github.com/hexschool/2022-web-layout-training/blob/main/week5/logo-ANSWER.svg
