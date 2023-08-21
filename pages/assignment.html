@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-2 gx-0">
+          <div
+            class="bg-body-tertiary vh-100 container-fluid d-none d-xl-flex align-content-center flex-column py-4"
+          >
+            <%- include('./layout/sideBarMenu');-%>
+          </div>
+        </div>
+        <div class="col-12 col-xl-10 gx-0">
+          <div class="container-xl py-2 py-xl-4 d-flex align-items-end">
+            <span
+              class="bg-success px-1 d-block d-lg-none"
+              data-bs-toggle="offcanvas"
+              href="#offcanvasExample"
+              role="button"
+              style="width: 32px"
+            >
+              <i
+                class="bi bi-list text-white font-bold"
+                style="font-size: 24px"
+              ></i>
+            </span>
+            <h4 class="fw-bold me-5 mb-0">Assignment</h4>
+            <div>
+              <span class="fw-bold me-2">All Courses</span>
+              <i class="bi bi-chevron-down text-success fw-bold"></i>
+            </div>
+            <i class="bi bi-search fs-4 fw-bold text-end ms-auto me-4"></i>
+            <i class="bi bi-bell-fill fs-4 text-end"></i>
+          </div>
+          <div class="container-xl">
+            <div class="row">
+              <div class="col-3">
+                <div class="mb-1">
+                  <span class="fs-6 fw-bold">All (4)</span>
+                </div>
+                <%- include('./components/contentMenu',{index:3});-%>
+              </div>
+              <div class="col-9">789</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 手機版導覽列 -->
+    <%- include('./layout/sideBarMenuForMobile'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
