@@ -1,0 +1,25 @@
+<ul class="list-group rounded-top-custom rounded-end-custom">
+  <% for(let i= 0; i <= index; i++) { %> <% if(i === 0) { %>
+  <li class="list-group-item bg-body-tertiary">
+    <div class="d-flex justify-content-between">
+      <small>Chapter Assignment 2</small>
+      <small>4 hrs ago</small>
+    </div>
+    <div class="d-flex justify-content-between align-items-end">
+      <strong>Please check this file…</strong>
+      <small class="text-secondary">Emily Wang</small>
+    </div>
+  </li>
+  <% } else { %>
+  <li class="list-group-item">
+    <div class="d-flex justify-content-between">
+      <small>Chapter Assignment 2</small>
+      <small>4 hrs ago</small>
+    </div>
+    <div class="d-flex justify-content-between align-items-end">
+      <strong>Please check this file…</strong>
+      <small class="text-secondary">Emily Wang</small>
+    </div>
+  </li>
+  <% } %> <% } %>
+</ul>

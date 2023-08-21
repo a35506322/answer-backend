@@ -1,6 +1,5 @@
 // BS 5 Required
 @import "bootstrap/scss/functions";
-@import "./helper/variables";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/variables-dark";
 @import "bootstrap/scss/maps";
@@ -32,6 +31,7 @@
 @import "bootstrap/scss/buttons";
 @import "bootstrap/scss/offcanvas";
 @import "bootstrap/scss/close";
+@import "bootstrap/scss/list-group";
 
 // Helpers
 @import "bootstrap/scss/helpers";
@@ -54,6 +54,38 @@ $utilities: map-merge(
       property: background-size,
       class: bg-s,
       values: cover,
+    ),
+    "rounded-top": (
+      property: border-top-left-radius border-top-right-radius,
+      class: rounded-top,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-xxl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill),
+        custom: 2px,
+      ),
+    ),
+    "rounded-end": (
+      property: border-top-right-radius border-bottom-right-radius,
+      class: rounded-end,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-xxl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill),
+        custom: 2px,
+      ),
     ),
   )
 );
