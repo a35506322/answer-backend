@@ -129,3 +129,15 @@ $utilities: map-merge(
 
 // icon
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+.active {
+  @extend .border;
+  @extend .border-success;
+  @extend .border-5;
+  @extend .border-top-0;
+  @extend .border-end-0;
+  @extend .border-bottom-0;
+  @extend .py-1;
+  @extend .text-success;
+  @extend .px-4;
+}
