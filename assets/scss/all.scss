@@ -13,6 +13,10 @@
   white-space: nowrap;
 }
 
+@mixin background-image($background-image) {
+  background: url($background-image) no-repeat center / cover;
+}
+
 @import "bootstrap/scss/mixins";
 
 @import "bootstrap/scss/utilities";
@@ -33,6 +37,9 @@
 @import "bootstrap/scss/close";
 @import "bootstrap/scss/list-group";
 @import "bootstrap/scss/card";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/pagination";
 
 // Helpers
 @import "bootstrap/scss/helpers";
@@ -115,6 +122,12 @@ $utilities: map-merge(
         auto: auto,
       ),
     ),
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      responsive: true,
+      values: auto pointer grab,
+    ),
   )
 );
 
@@ -124,6 +137,12 @@ $utilities: map-merge(
 .logo {
   @include logo(
     "https://raw.githubusercontent.com/hexschool/2022-web-layout-training/053bcf3afe88348b79971d2ea8de28f179cba5c5/week5/logo-ANSWER.svg"
+  );
+}
+
+.admin-deatil {
+  @include background-image(
+    "https://github.com/hexschool/2022-web-layout-training/blob/main/week5/emir.jpeg?raw=true"
   );
 }
 
@@ -140,4 +159,37 @@ $utilities: map-merge(
   @extend .py-1;
   @extend .text-success;
   @extend .px-4;
+}
+
+.active-icon {
+  // 180度旋轉往上
+  transform: rotate(180deg);
+  transition-duration: 150ms;
+  transition-timing-function: linear;
+}
+
+.pagination {
+  --bs-pagination-padding-x: 0.75rem;
+  --bs-pagination-padding-y: 0.375rem;
+  --bs-pagination-font-size: 1rem;
+  --bs-pagination-color: var(--bs-success);
+  --bs-pagination-bg: var(--bs-body-bg);
+  --bs-pagination-border-width: var(--bs-border-width);
+  --bs-pagination-border-color: var(--bs-success);
+  --bs-pagination-border-radius: 2px;
+  --bs-pagination-hover-color: var(--bs-white);
+  --bs-pagination-hover-bg: var(--bs-success);
+  --bs-pagination-hover-border-color: var(--bs-border-color);
+  --bs-pagination-focus-color: var(--bs-white);
+  --bs-pagination-focus-bg: var(--bs-success);
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgb(130, 184, 144);
+  --bs-pagination-active-color: #fff;
+  --bs-pagination-active-bg: var(--bs-success);
+  --bs-pagination-active-border-color: var(--bs-success);
+  --bs-pagination-disabled-color: var(--bs-secondary-color);
+  --bs-pagination-disabled-bg: var(--bs-secondary-bg);
+  --bs-pagination-disabled-border-color: var(--bs-border-color);
+  display: flex;
+  padding-left: 0;
+  list-style: none;
 }

@@ -19,5 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
       li.children[1].classList.add("text-success");
     }
   });
+
+  const chevronDowns = document.querySelectorAll("i.bi.bi-chevron-down");
+  chevronDowns.forEach((chevronDown) => {
+    chevronDown.addEventListener("click", function ($event) {
+      this.classList.toggle("active-icon");
+    });
+  });
 });
 console.log("Hello world!");
